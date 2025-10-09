@@ -22,7 +22,7 @@ public class ClienteController {
         return ResponseEntity.ok(cliente);
     };
 
-@GetMapping("{id}")
+@GetMapping("/public/{id}")
     public ResponseEntity<Cliente> buscaClienteId(@PathVariable Long id){
 
        Cliente clienteEncontrado = clienteService.buscaClientePorId(id);
