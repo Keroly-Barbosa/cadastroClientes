@@ -19,18 +19,6 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     @Modifying
     @Transactional
     @Query("Update Cliente c Set c.nome= :nome, c.cpf= :cpf, c.endereco= :endereco  where c.id = :id")
-    void atualizaNomeCpfEnderecoPorId (@Param("id") Long id, @Param("nome") String nome,  @Param("cpf") String cpf,  @Param("endereco") String endereco);
+    void updateNomeCpfEnderecoById (@Param("id") Long id, @Param("nome") String nome,  @Param("cpf") String cpf,  @Param("endereco") String endereco);
 
-//    @Modifying
-//    @Transactional
-//    @Query("Update Cliente c Set c.cpf= :cpf where c.id = :id")
-//    void atualizaCpfPorId (@Param("id") Long id, @Param("cpf") String cpf);
-//
-//    @Modifying
-//    @Transactional
-//    @Query("Update Cliente c Set c.endereco= :endereco where c.id = :id")
-//    void atualizaEnderecoPorId (@Param("id") Long id, @Param("endereco") String endereco);
-
-
-    //Optional<Cliente> findByCpf (String cpf);
 }

@@ -51,7 +51,7 @@ public class ClienteService {
         clienteAtualizado.setCpf(clienteDto.getCpf());
         clienteAtualizado.setEndereco(clienteDto.getEndereco());
 
-        clienteRepository.atualizaNomeCpfEnderecoPorId(clienteAtualizado.getId(), clienteAtualizado.getNome(), clienteAtualizado.getCpf(), clienteAtualizado.getEndereco());
+        clienteRepository.updateNomeCpfEnderecoById(clienteAtualizado.getId(), clienteAtualizado.getNome(), clienteAtualizado.getCpf(), clienteAtualizado.getEndereco());
 
         return clienteAtualizado;
     };
